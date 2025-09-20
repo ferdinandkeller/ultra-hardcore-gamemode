@@ -1,0 +1,6 @@
+{
+  "selectWorld.gameMode.ultra_hardcore": "Ultra Hardcore",
+  "selectWorld.gameMode.ultra_hardcore.info": "Survival Mode locked to 'Hard' difficulty with no natural health regeneration. You can't respawn if you die.",
+  "selectWorld.gameMode.ultra_hardcore.line1": "Same as Hardcore Mode, but health",
+  "selectWorld.gameMode.ultra_hardcore.line2": "doesn't regenerate naturally"
+}

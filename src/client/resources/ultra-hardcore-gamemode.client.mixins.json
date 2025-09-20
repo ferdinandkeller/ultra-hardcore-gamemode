@@ -1,0 +1,13 @@
+{
+	"required": true,
+	"package": "dev.ferdinandkeller.uhcgm.mixin.client",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+        "ScreenAccessor",
+        "CreateWorldScreenAccessor",
+		"CreateWorldScreenMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

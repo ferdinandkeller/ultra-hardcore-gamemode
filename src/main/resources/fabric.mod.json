@@ -1,0 +1,36 @@
+{
+	"schemaVersion": 1,
+	"id": "ultra-hardcore-gamemode",
+	"version": "${version}",
+	"name": "Ultra Hardcore Gamemode",
+	"description": "Adds an easy-to-use 'Ultra Hardcore' gamemode button. For the tryharders.",
+	"authors": [
+        {
+            "name":  "Ferdinand Keller",
+            "contact": {
+                "email": "ferdinand.keller@proton.me",
+                "homepage": "https://ferdinandkeller.dev"
+            }
+        }
+	],
+	"contact": {
+        "homepage": "https://modrinth.com/mod/ultra-hardcore-gamemode",
+        "sources": "https://github.com/ferdinandkeller/ultra-hardcore-gamemode",
+        "issues": "https://github.com/ferdinandkeller/ultra-hardcore-gamemode/issues"
+	},
+	"license": "MIT",
+	"icon": "assets/ultra-hardcore-gamemode/icon.png",
+	"environment": "client",
+	"entrypoints": {},
+	"mixins": [
+		{
+			"config": "ultra-hardcore-gamemode.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21.8",
+		"java": ">=21"
+	}
+}
