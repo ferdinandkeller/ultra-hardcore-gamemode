@@ -46,9 +46,12 @@ public class UHCGameTab extends GridScreenTab {
 
         GridWidget.Adder adder = this.grid.setRowSpacing(8).createAdder(1);
         Positioner positioner = adder.copyPositioner();
-        this.worldNameField = new TextFieldWidget(text_renderer, 208, 20, Text.translatable("selectWorld.enterName"));
+        GridWidget.Adder adder2 = new GridWidget().setRowSpacing(4).createAdder(1);
+        adder2.add(new TextWidget(ENTER_NAME_TEXT, text_renderer), adder2.copyPositioner().marginLeft(1));
+        this.worldNameField = new TextFieldWidget(text_renderer, 0, 0, 208, 20, Text.translatable("selectWorld.enterName"));
         this.worldNameField.setText(world_creator.getWorldName());
         this.worldNameField.setChangedListener(world_creator::setWorldName);
+        adder2.add(this.worldNameField, adder.copyPositioner().margin(1));
         world_creator
             .addListener(
                 creator -> this.worldNameField
@@ -57,10 +60,7 @@ public class UHCGameTab extends GridScreenTab {
                     )
             );
         ((ScreenAccessor)screen).setInitialFocusInvoker(this.worldNameField);
-        adder.add(
-            LayoutWidgets.createLabeledWidget(text_renderer, this.worldNameField, ENTER_NAME_TEXT),
-            adder.copyPositioner().alignHorizontalCenter()
-        );
+        adder.add(adder2.getGridWidget(), adder.copyPositioner().alignHorizontalCenter());
         CyclingButtonWidget<UHCMode> cyclingButtonWidget = adder.add(
             CyclingButtonWidget.<UHCMode>builder(value -> value.name)
                 .values(UHCMode.SURVIVAL, UHCMode.HARDCORE, UHCMode.ULTRA_HARDCORE, UHCMode.CREATIVE)
