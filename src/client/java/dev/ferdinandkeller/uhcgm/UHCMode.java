@@ -42,10 +42,10 @@ enum UHCMode {
 
     public static UHCMode fromStandardMode(WorldCreator.Mode mode, Boolean regen_enabled) {
         return switch (mode) {
-            case WorldCreator.Mode.SURVIVAL -> SURVIVAL;
-            case WorldCreator.Mode.HARDCORE -> regen_enabled ? HARDCORE : ULTRA_HARDCORE;
-            case WorldCreator.Mode.CREATIVE -> CREATIVE;
-            case WorldCreator.Mode.DEBUG -> DEBUG;
+            case SURVIVAL -> SURVIVAL;
+            case HARDCORE -> regen_enabled ? HARDCORE : ULTRA_HARDCORE;
+            case CREATIVE -> CREATIVE;
+            case DEBUG -> DEBUG;
         };
     }
 }
