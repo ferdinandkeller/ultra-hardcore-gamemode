@@ -99,7 +99,7 @@ public class UHCGameTab extends GridScreenTab {
             cyclingButtonWidget3.setValue(world_creator.areCheatsEnabled());
             cyclingButtonWidget3.active = !world_creator.isDebug() && !world_creator.isHardcore();
         });
-        if (!SharedConstants.getGameVersion().stable()) {
+        if (!SharedConstants.getGameVersion().isStable()) {
             adder.add(
                 ButtonWidget.builder(
                         EXPERIMENTS_TEXT,
